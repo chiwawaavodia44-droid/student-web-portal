@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EASTCSO WEB PORTAL</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#333;
+}
+
+header{
+background:#003366;
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+display:flex;
+align-items:center;
+}
+
+.logo img{
+width:70px;
+height:70px;
+border-radius:50%;
+margin-right:15px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:gold;
+}
+
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("images/background.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.hero p{
+margin-top:20px;
+font-size:20px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:gold;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:5px;
+transition:.3s;
+}
+
+.btn:hover{
+background:white;
+}
+
+.container{
+width:90%;
+margin:auto;
+padding:50px 0;
+}
+
+.title{
+text-align:center;
+margin-bottom:40px;
+font-size:35px;
+color:#003366;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:10px;
+}
+
+.about p{
+font-size:18px;
+line-height:30px;
+}
+
+.leaders{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:170px;
+height:170px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.news{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.news-box{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.contact form{
+display:grid;
+gap:20px;
+}
+
+input,
+textarea{
+padding:15px;
+font-size:17px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+padding:15px;
+background:#003366;
+color:white;
+border:none;
+font-size:18px;
+cursor:pointer;
+}
+
+button:hover{
+background:green;
+}
+
+table{
+width:100%;
+margin-top:20px;
+border-collapse:collapse;
+background:white;
+}
+
+table th,
+table td{
+padding:15px;
+border:1px solid #ddd;
+text-align:center;
+}
+
+table th{
+background:#003366;
+color:white;
+}
+
+footer{
+background:#003366;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.about{
+grid-template-columns:1fr;
+}
+
+header{
+flex-direction:column;
+}
+
+nav ul{
+flex-direction:column;
+text-align:center;
+}
+
+nav ul li{
+margin:10px;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="photo.png" width="300">
+
+<div>
+
+<h2>EASTCSO</h2>
+
+<p>Web Portal</p>
+
+</div>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#leaders">Leaders</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#news">News</a></li>
+
+<li><a href="#members">Members</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>WELCOME TO EASTCSO WEB PORTAL</h1>
+
+<p>Providing Union Education to the Community</p>
+
+<a href="#about" class="btn">Learn More</a>
+
+</div>
+
+</section>
+<!-- ABOUT SECTION -->
+
+<section class="container" id="about">
+
+<h2 class="title">About EASTCSO</h2>
+
+<div class="about">
+
+<img src="photo.png" width="300">
+
+<div>
+
+<p>
+
+EASTCSO Web Portal is a platform designed to provide Union education,
+share important announcements, display leadership information,
+publish news and events, and improve communication among students.
+
+</p>
+
+<br>
+
+<p>
+
+This system enables members to access information quickly
+while giving administrators the ability to manage member records
+using CRUD operations.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LEADERSHIP -->
+
+<section class="container" id="leaders">
+
+<h2 class="title">Leadership</h2>
+
+<div class="leaders">
+
+<div class="card">
+
+<img src="photo1.jpg" width="300">
+
+<h3>MARIO MACHA</h3>
+
+<p>President</p>
+
+</div>
+
+<div class="card">
+
+<img src="photo2.jpg" alt="Vice President">
+
+<h3>NESTA MCHOLA</h3>
+
+<p>Vice President</p>
+
+</div>
+
+<div class="card">
+
+<img src="photo6.jpg" width="300">
+
+<h3>STEVEN LADISLAUS</h3>
+
+<p>General Secretary</p>
+
+</div>
+
+<div class="card">
+
+<img src="photo5.jpg" width="300">
+
+<h3>CALORINE VICTOR</h3>
+
+<p>Financial Officer</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="container" id="gallery">
+
+<h2 class="title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="photo3.jpg">
+
+</div>
+
+</section>
+
+<!-- NEWS -->
+
+<section class="container" id="news">
+
+<h2 class="title">Latest News</h2>
+
+<div class="news">
+
+<div class="news-box">
+
+<h3>Union Education</h3>
+
+<p>
+
+Students continue receiving Union education through seminars,
+meetings and online awareness campaigns.
+
+</p>
+
+</div>
+
+<div class="news-box">
+
+<h3>Innovation Challenge</h3>
+
+<p>
+
+EASTCSO encourages students to participate in innovation
+competitions and technology development.
+
+</p>
+
+</div>
+
+<div class="news-box">
+
+<h3>Community Services</h3>
+
+<p>
+
+Leaders organize different community activities to improve
+public awareness and participation.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CRUD -->
+
+<section class="container" id="members">
+
+<h2 class="title">Member Registration</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="text" id="course" placeholder="Course">
+
+<input type="text" id="phone" placeholder="Phone Number">
+
+<br><br>
+
+<button onclick="saveMember()">Save Member</button>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>No</th>
+
+<th>Name</th>
+
+<th>Course</th>
+
+<th>Phone</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="output">
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="container contact" id="contact">
+
+<h2 class="title">Contact Us</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email Address">
+
+<textarea rows="6" placeholder="Write your message"></textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<h3>EASTCSO WEB PORTAL</h3>
+
+<p>
+
+© 2026 All Rights Reserved
+
+</p>
+
+</footer>
+
+<script>
+let members = JSON.parse(localStorage.getItem("members")) || [];
+
+// Display members
+function displayMembers() {
+
+let output = document.getElementById("output");
+
+output.innerHTML = "";
+
+members.forEach((member,index)=>{
+
+output.innerHTML += `
+
+<tr>
+
+<td>${index+1}</td>
+
+<td>${member.name}</td>
+
+<td>${member.course}</td>
+
+<td>${member.phone}</td>
+
+<td>
+
+<button onclick="editMember(${index})">Edit</button>
+
+<button onclick="deleteMember(${index})">Delete</button>
+
+</td>
+
+</tr>
+
+`;
+
+});
+
+localStorage.setItem("members",JSON.stringify(members));
+
+}
+
+// Save Member
+
+function saveMember(){
+
+let name=document.getElementById("name").value;
+
+let course=document.getElementById("course").value;
+
+let phone=document.getElementById("phone").value;
+
+if(name=="" || course=="" || phone==""){
+
+alert("Please fill all fields");
+
+return;
+
+}
+
+members.push({
+
+name:name,
+
+course:course,
+
+phone:phone
+
+});
+
+document.getElementById("name").value="";
+
+document.getElementById("course").value="";
+
+document.getElementById("phone").value="";
+
+displayMembers();
+
+}
+
+// Delete Member
+
+function deleteMember(index){
+
+if(confirm("Delete this member?")){
+
+members.splice(index,1);
+
+displayMembers();
+
+}
+
+}
+
+// Edit Member
+
+function editMember(index){
+
+let member=members[index];
+
+let newName=prompt("Edit Name",member.name);
+
+let newCourse=prompt("Edit Course",member.course);
+
+let newPhone=prompt("Edit Phone",member.phone);
+
+if(newName && newCourse && newPhone){
+
+members[index]={
+
+name:newName,
+
+course:newCourse,
+
+phone:newPhone
+
+};
+
+displayMembers();
+
+}
+
+}
+
+// Load data automatically
+
+displayMembers();
+
+</script>
+
+</body>
+
+</html>
